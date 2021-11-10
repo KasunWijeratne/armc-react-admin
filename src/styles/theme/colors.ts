@@ -11,4 +11,5 @@ export const palatte = {
   shadowPrimary: "#00000029",
   bgPrimary: "#FFFFFF",
   bgSecondary: "#F4F4F4",
+  lightGray: "#BEBEBE1A",
 };

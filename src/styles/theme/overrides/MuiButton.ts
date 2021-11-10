@@ -12,6 +12,7 @@ export const MuiButton = {
       color: palatte.bgPrimary,
       boxShadow: "none",
       fontSize: 14,
+      textTransform: "none",
     },
   },
 };

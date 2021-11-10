@@ -1,20 +1,27 @@
 import {
+  Button,
   Drawer,
-  List,
+  List as MUIList,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Theme,
   Toolbar,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import DashboardIcon from "../icons/Dashboard";
 import UserGroup from "../icons/UserGroup";
 import Image from "../image";
 import UserImage from "../../assets/images/download (3)@2x.png";
-import { Box } from "@mui/system";
+import { Box, styled } from "@mui/system";
+import CoinStack from "../icons/CoinStack";
+import Medal from "../icons/Medal";
+import CreditCard from "../icons/CreditCard";
+import MedalSolid from "../icons/MedalSolid";
+import HandHoldingUSD from "../icons/HandHoldingUSD";
+import Bell from "../icons/Bell";
+import PieChart from "../icons/PieChart";
 
-export const sidenavWidth = 265;
+export const sidenavWidth = 290;
 
 const navItems = [
   {
@@ -27,41 +34,53 @@ const navItems = [
   },
   {
     title: "Points",
-    icon: <DashboardIcon />,
+    icon: <CoinStack />,
   },
   {
     title: "Rewards",
-    icon: <DashboardIcon />,
+    icon: <Medal />,
   },
   {
     title: "Cards",
-    icon: <DashboardIcon />,
+    icon: <CreditCard />,
   },
   {
     title: "Tiers",
-    icon: <DashboardIcon />,
+    icon: <MedalSolid />,
   },
   {
     title: "Transactions",
-    icon: <DashboardIcon />,
+    icon: <HandHoldingUSD />,
   },
   {
     title: "Notifications",
-    icon: <DashboardIcon />,
+    icon: <Bell />,
   },
   {
     title: "Analytics",
-    icon: <DashboardIcon />,
+    icon: <PieChart />,
   },
 ];
 
 interface Props {
   window?: () => Window;
-  theme: Theme;
 }
 
+const List = styled(MUIList)(({ theme }) => ({
+  "& .MuiListItem-root": {
+    paddingLeft: theme.spacing(5),
+    paddingRight: theme.spacing(5),
+  },
+  "& .MuiListItemIcon-root": {
+    minWidth: 30,
+  },
+  "& .MuiListItemText-root": {
+    fontSize: 20,
+  },
+}));
+
 const drawer = (
-  <div>
+  <Box>
     <Toolbar />
     <List>
       {navItems.map((item, index) => (
@@ -79,11 +98,19 @@ const drawer = (
         <ListItemText primary={"Carmelo Gardner"} />
       </ListItem>
     </List>
-  </div>
+  </Box>
 );
 
-const Sidenav = ({ window, theme }: Props) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+const sidenavPaperStyles = {
+  "& .MuiDrawer-paper": {
+    bgcolor: "background.default",
+    border: 'none',
+    width: sidenavWidth,
+  },
+};
+
+const Sidenav = ({ window }: Props) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -93,11 +120,7 @@ const Sidenav = ({ window, theme }: Props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box
-      sx={{
-        padding: theme.spacing(2),
-      }}
-    >
+    <>
       <Drawer
         container={container}
         variant="temporary"
@@ -108,10 +131,8 @@ const Sidenav = ({ window, theme }: Props) => {
         }}
         sx={{
           display: { xs: "block", sm: "none" },
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: sidenavWidth,
-          },
+          p: 2,
+          ...sidenavPaperStyles,
         }}
       >
         {drawer}
@@ -120,16 +141,14 @@ const Sidenav = ({ window, theme }: Props) => {
         variant="permanent"
         sx={{
           display: { xs: "none", sm: "block" },
-          "& .MuiDrawer-paper": {
-            boxSizing: "border-box",
-            width: sidenavWidth,
-          },
+          p: 2,
+          ...sidenavPaperStyles,
         }}
         open
       >
         {drawer}
       </Drawer>
-    </Box>
+    </>
   );
 };
 

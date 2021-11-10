@@ -1,9 +1,9 @@
 import { createTheme } from "@mui/material/styles";
 import { palatte } from "./colors";
-import { MuiButton } from "./overrides";
+import { MuiButton, MuiCard, MuiChip } from "./overrides";
 import { typography } from "./typography";
 
-const { primary, secondary, error, warning, info } = palatte;
+const { primary, secondary, error, warning, info, bgPrimary, bgSecondary } = palatte;
 
 export const theme = createTheme({
   spacing: 8,
@@ -23,10 +23,14 @@ export const theme = createTheme({
     info: {
       main: info,
     },
+    background: {
+      default: bgSecondary,
+      paper: bgPrimary,
+    },
   },
   components: {
     MuiButton: {
-      ...MuiButton,
+      ...MuiButton as any,
       variants: [
         {
           props: { variant: "round", color: "primary" },
@@ -40,6 +44,12 @@ export const theme = createTheme({
         },
       ],
     },
+    MuiCard: {
+      ...MuiCard,
+    },
+    MuiChip: {
+      ...MuiChip,
+    }
   },
   typography,
 });

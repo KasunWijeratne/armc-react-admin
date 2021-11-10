@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 interface Props {
   src: string;
   alt: string;
-  size: 'xs' | 'md' | 'lg';
+  size?: 'xs' | 'md' | 'lg';
   round?: boolean;
 }
 
@@ -17,7 +17,7 @@ const setSize = (size: string) => {
   return 100;
 }
 
-const Image = ({ src, alt, round, size = 'lg' }: Props) => {
+const Image = ({ src, alt, round, size = 'lg', ...rest }: Props) => {
   return (
     <Box
       sx={{

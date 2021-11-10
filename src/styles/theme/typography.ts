@@ -1,10 +1,13 @@
 export const typography = {
   fontFamily: ["Poppins"].join(),
-  body: {
+  body1: {
     fontSize: 16,
+  },  
+  body2: {
+    fontSize: 14,
   },
   h1: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 500,
   },
   h2: {
