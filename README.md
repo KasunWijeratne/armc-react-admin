@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+# ARMC - Admin Panel
+
+This is a sample static UI build with React + Typescript.
+
+## Main tech
+- React + Typescript
+
+## Main third-party libs
+- Material UI
+- Storybook
+
+## Hosted at
+https://hungry-heyrovsky-861626.netlify.app/
+
+## Responsiveness
+This has been built based on a design created for 1920 x 1080 screen size, hence the exact layout can be seen through a same sized screen.
+However the UI responses for Web, Tab and Mobile screens (Finetuning needed).
+
+- - -
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
