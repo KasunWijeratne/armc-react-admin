@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { IconButton, Theme, Typography, useMediaQuery } from '@mui/material';
-import { Box } from '@mui/system';
-import { Context as navContext } from '../../../context/navContext';
-import Hamburger from '../../icons/Hamburger';
+import React, { useContext } from "react";
+import { IconButton, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/system";
+import { Context as navContext } from "../../../context/navContext";
+import Hamburger from "../../icons/Hamburger";
 
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
   toolbar?: JSX.Element;
 }
 
-const LayoutTopTitle = ({ title, toolbar, children } : Props) => {
+const LayoutTopTitle = ({ title, toolbar, children }: Props) => {
   const { setOpen } = useContext<any>(navContext);
   const matches = useMediaQuery((theme: Theme) => theme.breakpoints.down("md"));
 
@@ -19,7 +19,15 @@ const LayoutTopTitle = ({ title, toolbar, children } : Props) => {
       <Box
         display="flex"
         justifyContent="space-between"
-        sx={{ height: 120, p: 5 }}
+        alignItems="center"
+        sx={{
+          height: 120,
+          py: 5,
+          px: {
+            sm: 5,
+            xs: 2,
+          },
+        }}
       >
         <Box display="flex" alignItems="center">
           {matches && (
@@ -44,6 +52,6 @@ const LayoutTopTitle = ({ title, toolbar, children } : Props) => {
       </Box>
     </Box>
   );
-}
+};
 
-export default LayoutTopTitle
+export default LayoutTopTitle;

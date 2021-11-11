@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/system';
 import UserImage from '../../../assets/images/Ellipse 16@2x.png';
 import SilverMedal from '../../../assets/images/silver-medal.svg';
-import { Divider, Grid, Link, Typography, } from '@mui/material';
+import { Grid, Link, Typography, } from '@mui/material';
 import UserInfo from './UserInfo';
 import OtherInfo from './OtherInfo';
 import Envelope from '../../../components/icons/Envelope';
@@ -10,6 +10,7 @@ import Phone from '../../../components/icons/Phone';
 import AccountTypeControl from './AccountTypeControl';
 import AccountStatusControl from './AccountStatusControl';
 import Image from '../../../components/Image/Image';
+import { grey } from '@mui/material/colors';
 
 interface Props {
   data: {
@@ -50,18 +51,47 @@ const TopBanner = ({ data } : Props) => {
       }}
     >
       <Grid container>
-        <Grid item display="flex" xl={3} lg={3} md={6} xs={12}>
+        <Grid
+          item
+          display="flex"
+          xl={3}
+          lg={3}
+          md={6}
+          xs={12}
+          sx={{
+            borderWidth: {
+              md: "0 1px 0 0",
+              sm: "0 0 1px 0",
+              xs: "0 0 1px 0",
+            },
+            borderStyle: "solid",
+            borderColor: grey[300],
+          }}
+        >
           <UserInfo image={UserImage} name={name} id={id} lastSeen={lastSeen} />
-          <Divider orientation="vertical" flexItem />
         </Grid>
         <Grid item display="flex" xl={3} lg={3} md={6} xs={12}>
-          <Box flexDirection="column" width={1}>
-            <Box px={5} py={2}>
+          <Grid container>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 1px 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Email"
                 list={[
                   {
-                    icon: <Envelope sx={{ width: 20, height: 15 }} />,
+                    icon: <Envelope />,
                     content: email,
                   },
                 ]}
@@ -71,25 +101,51 @@ const TopBanner = ({ data } : Props) => {
                   </Link>
                 }
               />
-            </Box>
-            <Divider flexItem />
-            <Box px={5} py={2}>
+            </Grid>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 0 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Contact No"
                 list={[
                   {
-                    icon: <Phone sx={{ width: 20, height: 15 }} />,
+                    icon: <Phone />,
                     content: phone,
                   },
                 ]}
               />
-            </Box>
-          </Box>
-          <Divider orientation="vertical" flexItem />
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item display="flex" xl={2} lg={2} md={6} xs={12}>
-          <Box flexDirection="column" width={1}>
-            <Box px={1} py={2}>
+          <Grid container>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 1px 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Account Type"
                 control={<AccountTypeControl />}
@@ -99,9 +155,22 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-            <Divider flexItem />
-            <Box px={1} py={2}>
+            </Grid>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 0 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Account Status"
                 list={[
@@ -110,13 +179,26 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-          </Box>
-          <Divider orientation="vertical" flexItem />
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item display="flex" xl={2} lg={2} md={6} xs={12}>
-          <Box flexDirection="column" width={1}>
-            <Box px={1} py={2}>
+          <Grid container>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 1px 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Redeemable Points"
                 control={<AccountTypeControl />}
@@ -133,9 +215,22 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-            <Divider flexItem />
-            <Box px={1} py={2}>
+            </Grid>
+            <Grid
+              item
+              width={1}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 1px 0 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Tier Points"
                 list={[
@@ -144,13 +239,27 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-          </Box>
-          <Divider orientation="vertical" flexItem />
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item display="flex" xl={2} lg={2} md={6} xs={12}>
-          <Box flexDirection="column" width={1}>
-            <Box px={1} py={2}>
+        <Grid item display="flex" xl={2} lg={2} md={12} sm={12} xs={12}>
+          <Grid container>
+            <Grid
+              item
+              width={1}
+              sm={6}
+              px={5}
+              py={2}
+              sx={{
+                borderWidth: {
+                  md: "0 0 1px 0",
+                  sm: "0 0 1px 0",
+                  xs: "0 0 1px 0",
+                },
+                borderStyle: "solid",
+                borderColor: grey[300],
+              }}
+            >
               <OtherInfo
                 subheader="Tier"
                 list={[
@@ -168,9 +277,8 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-            <Divider flexItem />
-            <Box px={1} py={2}>
+            </Grid>
+            <Grid item px={5} py={2}>
               <OtherInfo
                 subheader="Affinity Group"
                 list={[
@@ -179,8 +287,8 @@ const TopBanner = ({ data } : Props) => {
                   },
                 ]}
               />
-            </Box>
-          </Box>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Box>
