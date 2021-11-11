@@ -137,31 +137,36 @@ const MembersPage = () => {
     <LayoutTopTitle title="Members" toolbar={<UserSettings />}>
       <TopBanner data={data} />
       <Grid container>
-        <Grid item display="flex" xl={3} lg={3} md={6} xs={12}>
-          <Box p={5}>
+        <Grid item display="flex" xl={3} lg={3} md={12} xs={12}>
+          <Box
+            p={{
+              sm: 5,
+              xs: 1,
+            }}
+          >
             <Box mb={2.5}>
               <Typography variant="h2">About Member</Typography>
             </Box>
             <Grid container spacing={3}>
-              <Grid item md={12}>
+              <Grid item lg={12} md={6} sm={12} width={1}>
                 <LoyalityCard
                   count={data.loyalityCards.length}
                   cards={[data.loyalityCards[0]]}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item lg={12} md={6} sm={12} width={1}>
                 <SecondaryAccounts
                   count={3}
                   accounts={data.secondaryAccounts}
                 />
               </Grid>
-              <Grid item md={12}>
+              <Grid item lg={12} md={6} sm={12} width={1}>
                 <Tags count={3} tags={data.tags} />
               </Grid>
-              <Grid item md={12}>
+              <Grid item lg={12} md={6} sm={12} width={1}>
                 <CustomerPortal count={3} portals={data.customerPortals} />
               </Grid>
-              <Grid item md={12}>
+              <Grid item lg={12} md={6} sm={12} width={1}>
                 <CustomerDetails count={3} details={data.customerDetails} />
               </Grid>
             </Grid>
@@ -169,7 +174,12 @@ const MembersPage = () => {
           <Divider orientation="vertical" flexItem />
         </Grid>
         <Grid item xl={9} lg={9} sm={12} xs={12}>
-          <Box p={5}>
+          <Box
+            p={{
+              sm: 5,
+              xs: 1,
+            }}
+          >
             <Box mt={-1}>
               <MembersTabs data={data.tabData} />
             </Box>

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Button, Menu, MenuItem } from "@mui/material";
+import { Button, Menu, MenuItem, Theme, useMediaQuery } from "@mui/material";
 import UserCogSolid from "../../../components/icons/UserCogSolid";
 import ExpandDown from "../../../components/icons/ExpandDown";
 
 const UserSettings = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const matches = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
+const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
@@ -25,7 +26,7 @@ const UserSettings = () => {
         endIcon={<ExpandDown />}
         onClick={handleClick}
       >
-        User Settings
+        { matches ? '' : 'User Settings' }
       </Button>
       <Menu
         id="basic-menu"
