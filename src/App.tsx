@@ -1,16 +1,17 @@
 import React from "react";
 import { Box, Paper } from "@mui/material";
-import Sidenav, { sidenavWidth } from "./components/Sidenav";
+import Sidenav from "./components/Sidenav";
 import MembersPage from "./pages/Members";
+import { SIDENAV_WIDTH } from "./config/constants";
 
 function App() {
   return (
-    <Box sx={{ display: "flex", height: "100%", bgcolor: ".pa" }}>
+    <Box sx={{ display: "flex", height: "100%" }}>
       <Box
         component="nav"
         sx={{
           width: {
-            sm: sidenavWidth,
+            sm: SIDENAV_WIDTH,
           },
           flexShrink: {
             sm: 0,
@@ -29,7 +30,7 @@ function App() {
         sx={{
           flexGrow: 1,
           width: {
-            sm: `calc(100% - ${sidenavWidth}px)`,
+            sm: `calc(100% - ${SIDENAV_WIDTH}px)`,
             xs: `100%`,
           },
           pl: {

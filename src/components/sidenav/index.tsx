@@ -1,17 +1,18 @@
 import {
-  Button,
   Drawer,
   List as MUIList,
   ListItem,
   ListItemIcon,
   ListItemText,
-  Toolbar,
+  Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import DashboardIcon from "../icons/Dashboard";
 import UserGroup from "../icons/UserGroup";
 import Image from "../Image";
 import UserImage from "../../assets/images/download (3)@2x.png";
+import Twitter from "../../assets/images/twitter.svg";
+import SriLanka from "../../assets/images/coffee-cup.svg";
 import { Box, styled } from "@mui/system";
 import CoinStack from "../icons/CoinStack";
 import Medal from "../icons/Medal";
@@ -20,8 +21,9 @@ import MedalSolid from "../icons/MedalSolid";
 import HandHoldingUSD from "../icons/HandHoldingUSD";
 import Bell from "../icons/Bell";
 import PieChart from "../icons/PieChart";
-
-export const sidenavWidth = 290;
+import ImageTextSelect from "../ImageTextSelect";
+import { sidenavPaperStyles } from "./sidenav.style";
+import { Context } from "../../context/navContext";
 
 const navItems = [
   {
@@ -80,9 +82,29 @@ const List = styled(MUIList)(({ theme }) => ({
 }));
 
 const drawer = (
-  <Box>
-    <Toolbar />
-    <List>
+  <Box display="flex" flexDirection="column" height="95%">
+    <Box display="flex" alignItems="center" px={5} py={5}>
+      <Image src={Twitter} alt="Admin Flow" size="sm" />
+      <Typography variant="h2" ml={2}>
+        Admin Flow
+      </Typography>
+    </Box>
+    <Box px={3} pb={3}>
+      <ImageTextSelect
+        value={"Sri Lanka"}
+        items={[
+          {
+            text: "Sri Lanka",
+            image: SriLanka,
+          },
+          {
+            text: "Australia",
+            image: UserImage,
+          },
+        ]}
+      />
+    </Box>
+    <List sx={{ flex: 1 }}>
       {navItems.map((item, index) => (
         <ListItem button key={`item${index}`}>
           <ListItemIcon>{item.icon}</ListItemIcon>
@@ -90,30 +112,30 @@ const drawer = (
         </ListItem>
       ))}
     </List>
-    <List>
-      <ListItem>
-        <ListItemIcon>
-          <Image src={UserImage} alt="User" size="xs" round />
-        </ListItemIcon>
-        <ListItemText primary={"Carmelo Gardner"} />
-      </ListItem>
-    </List>
+    <Box px={3}>
+      <ImageTextSelect
+        value={"Carmelo Gardner"}
+        items={[
+          {
+            text: "Carmelo Gardner",
+            image: UserImage,
+          },
+          {
+            text: "Carmelo Gardner",
+            image: UserImage,
+          },
+        ]}
+      />
+    </Box>
   </Box>
 );
 
-const sidenavPaperStyles = {
-  "& .MuiDrawer-paper": {
-    bgcolor: "background.default",
-    border: 'none',
-    width: sidenavWidth,
-  },
-};
-
 const Sidenav = ({ window }: Props) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
 
+  const { open, setOpen } = useContext<any>(Context);
+  
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setOpen(!open);
   };
 
   const container =
@@ -124,11 +146,8 @@ const Sidenav = ({ window }: Props) => {
       <Drawer
         container={container}
         variant="temporary"
-        open={mobileOpen}
+        open={open}
         onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true,
-        }}
         sx={{
           display: { xs: "block", sm: "none" },
           p: 2,

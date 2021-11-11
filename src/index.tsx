@@ -6,11 +6,14 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/theme";
 import CssBaseline from "@mui/material/CssBaseline";
+import NavContext from "./context/navContext";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <App />
+    <NavContext>
+      <App />
+    </NavContext>
   </ThemeProvider>,
   document.getElementById("root")
 );

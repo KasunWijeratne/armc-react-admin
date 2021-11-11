@@ -4,13 +4,15 @@ import { Box } from "@mui/system";
 interface Props {
   src: string;
   alt: string;
-  size?: 'xs' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   round?: boolean;
 }
 
 const setSize = (size: string) => {
   if(size === 'xs') {
     return 24;
+  } else if (size === 'sm') {
+    return 40;
   } else if (size === 'md') {
     return 75;
   }
