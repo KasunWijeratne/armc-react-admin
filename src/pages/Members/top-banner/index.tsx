@@ -60,7 +60,7 @@ const TopBanner = ({ data } : Props) => {
           xs={12}
           sx={{
             borderWidth: {
-              md: "0 1px 0 0",
+              md: "0 1px 1px 0",
               sm: "0 0 1px 0",
               xs: "0 0 1px 0",
             },
@@ -79,7 +79,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 1px 1px 0",
+                  md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },
@@ -109,7 +109,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 1px 0 0",
+                  md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },
@@ -163,7 +163,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 1px 0 0",
+                  md: "0 1px 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },
@@ -191,7 +191,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 1px 1px 0",
+                  md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },
@@ -223,7 +223,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 1px 0 0",
+                  md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },
@@ -252,7 +252,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
-                  md: "0 0 1px 0",
+                  md: "0 1px 0 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
                 },

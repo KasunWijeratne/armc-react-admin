@@ -7,7 +7,7 @@ This is a sample static UI build with React + Typescript.
 
 ## Main third-party libs
 - Material UI
-- Storybook
+- Storybook (yarn storybook)
 
 ## Hosted at
 https://hungry-heyrovsky-861626.netlify.app/
