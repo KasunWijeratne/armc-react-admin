@@ -53,6 +53,8 @@ const MembersTabs = ({ data } : { data: any}) => {
         onChange={handleChange}
         textColor="secondary"
         indicatorColor="secondary"
+        variant="scrollable"
+        scrollButtons="auto"
       >
         <Tab icon={<PieChart />} iconPosition="start" label="Overview" />
         <Tab icon={<XML />} iconPosition="start" label="Activity Log" />
@@ -63,28 +65,28 @@ const MembersTabs = ({ data } : { data: any}) => {
       <Divider />
       <TabPanel value={value} index={0}>
         <Grid container spacing={3}>
-          <Grid item lg={8}>
+          <Grid item lg={8} xs={12}>
             <Grid container spacing={3}>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <ClaimReward count={3} data={data.overview.claimRewards} />
               </Grid>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <RedeemReward count={3} data={data.overview.redeemRewards} />
               </Grid>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <CollectPoints count={3} data={data.overview.collectPoints} />
               </Grid>
             </Grid>
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={4} xs={12}>
             <Grid container spacing={3}>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <PerformanceMatrices data={data.overview.performanceMatrices} />
               </Grid>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <MemberInsights data={data.overview.memberInsight} />
               </Grid>
-              <Grid item width={1}>
+              <Grid item lg={12} xs={12}>
                 <UnlockedRewards data={data.overview.unlockedRewards} />
               </Grid>
             </Grid>

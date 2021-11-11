@@ -41,4 +41,4 @@ const Card = ({ children, title, subheader, action, footer, color, borderColor }
   );
 };
 
-export default Card;
+export default React.memo(Card);

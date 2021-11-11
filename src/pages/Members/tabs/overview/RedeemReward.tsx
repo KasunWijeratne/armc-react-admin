@@ -4,6 +4,7 @@ import ListCompact from "../../../../components/list/ListCompact";
 import GiftCircle from "../../../../components/icons/GiftCircle";
 import CardLoose from "../../../../components/Card/CardLoose";
 import Calendar from "../../../../components/icons/Calendar";
+import TagCircle from "../../../../components/icons/TagCircle";
 
 interface Props {
   count: number;
@@ -18,7 +19,7 @@ const RedeemReward = ({ count, data }: Props) => {
   return (
     <CardLoose
       titleText="Redeem Reward"
-      titleIcon={<GiftCircle />}
+      titleIcon={<TagCircle />}
       actionIcon={<Calendar />}
       actionText="2020-10-07 2.52 pm"
     >

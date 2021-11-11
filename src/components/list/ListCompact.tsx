@@ -10,12 +10,14 @@ interface Props {
   }[];
   control?: JSX.Element;
   subheader?: string;
+  borderLess?: boolean;
 }
 
 const ListCompact = ({
   subheader,
   list,
   control,
+  borderLess,
 } : Props) => {
   return (
     <List
@@ -46,11 +48,13 @@ const ListCompact = ({
         <>
           <ListItem
             sx={{
-              p: 0,
+              p: borderLess ? 1 : 0,
+              mt: borderLess ? 1 : 0,
               lineHeight: 1,
               display: "flex",
               justifyContent: "space-between",
               alignItems: "flex-start",
+              bgcolor: borderLess ? "background.default" : "transparent",
             }}
           >
             <Box display="flex" alignItems="flex-start">
@@ -61,18 +65,20 @@ const ListCompact = ({
                     mt: 0.5,
                   }}
                 >
-                  {React.cloneElement(item.icon, { sx: { width: 20, height: 15 } })}
+                  {React.cloneElement(item.icon, {
+                    sx: { width: 20, height: 15 },
+                  })}
                 </ListItemIcon>
               )}
               <ListItemText sx={{ m: 0 }} primary={item.content} />
             </Box>
             {item.control && item.control}
           </ListItem>
-          {i < list.length - 1 && <Divider sx={{ my: 1 }} />}
+          {!borderLess && i < list.length - 1 && <Divider sx={{ my: 1 }} />}
         </>
       ))}
     </List>
   );
 }
 
-export default ListCompact
+export default React.memo(ListCompact);

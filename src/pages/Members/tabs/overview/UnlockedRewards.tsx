@@ -21,7 +21,7 @@ function rewardImage(reward: string) {
 
 const UnlockedRewards = ({ data }: { data: Record<string, string|number>[] }) => {
   return (
-    <Card title="Performance Matrices" borderColor="info.main">
+    <Card title="Unlocked Rewards" borderColor="info.main">
       <Box>
         <ListCompact
           list={data.map((item) => ({
@@ -29,6 +29,7 @@ const UnlockedRewards = ({ data }: { data: Record<string, string|number>[] }) =>
             content: <Typography color="GrayText">{item.name}</Typography>,
             control: <Typography>{item.points} Points</Typography>,
           }))}
+          borderLess
         />
       </Box>
     </Card>
