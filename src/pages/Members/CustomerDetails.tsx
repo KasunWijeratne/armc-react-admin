@@ -1,10 +1,8 @@
-import { Button, CardActions, Link, Typography } from "@mui/material";
+import { Button, CardActions, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import Card from "../../components/Card";
 import ExpandDown from "../../components/icons/ExpandDown";
-import LaptopSolid from "../../components/icons/LaptopSolid";
-import MobileSolid from "../../components/icons/MobileSolid";
 import ListCompact from "../../components/list/ListCompact";
 
 interface Props {

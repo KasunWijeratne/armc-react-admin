@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import ListCompact from "../../../../components/list/ListCompact";
-import GiftCircle from "../../../../components/icons/GiftCircle";
 import CardLoose from "../../../../components/Card/CardLoose";
 import Calendar from "../../../../components/icons/Calendar";
 import TagCircle from "../../../../components/icons/TagCircle";

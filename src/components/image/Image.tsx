@@ -19,7 +19,7 @@ const setSize = (size: string) => {
   return 100;
 }
 
-const Image = ({ src, alt, round, size = 'lg', ...rest }: Props) => {
+const Image = ({ src, alt, round, size = 'lg' }: Props) => {
   return (
     <Box
       sx={{

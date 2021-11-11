@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Image from ".";
 import Cup from "../../assets/images/coffee-cup.svg";
+import Image from "./Image";
 
 export default {
   title: "Example/Image",

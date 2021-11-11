@@ -6,10 +6,9 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import DashboardIcon from "../icons/Dashboard";
 import UserGroup from "../icons/UserGroup";
-import Image from "../Image";
 import UserImage from "../../assets/images/download (3)@2x.png";
 import Twitter from "../../assets/images/twitter.svg";
 import SriLanka from "../../assets/images/coffee-cup.svg";
@@ -24,6 +23,7 @@ import PieChart from "../icons/PieChart";
 import ImageTextSelect from "../ImageTextSelect";
 import { sidenavPaperStyles } from "./sidenav.style";
 import { Context } from "../../context/navContext";
+import Image from "../Image/Image";
 
 const navItems = [
   {

@@ -9,7 +9,7 @@ import Envelope from '../../../components/icons/Envelope';
 import Phone from '../../../components/icons/Phone';
 import AccountTypeControl from './AccountTypeControl';
 import AccountStatusControl from './AccountStatusControl';
-import Image from '../../../components/Image';
+import Image from '../../../components/Image/Image';
 
 interface Props {
   data: {

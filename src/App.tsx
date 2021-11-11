@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Paper } from "@mui/material";
-import Sidenav from "./components/Sidenav";
 import MembersPage from "./pages/Members";
 import { SIDENAV_WIDTH } from "./config/constants";
+import Sidenav from "./components/sidenav";
 
 function App() {
   return (

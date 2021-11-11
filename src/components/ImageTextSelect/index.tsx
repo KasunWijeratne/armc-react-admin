@@ -1,7 +1,7 @@
 import React from 'react'
 import { MenuItem, Select, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import Image from '../Image';
+import Image from '../Image/Image';
 
 const ImageTextSelect = ({
   items,
