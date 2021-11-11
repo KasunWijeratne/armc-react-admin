@@ -159,7 +159,7 @@ const Sidenav = ({ window }: Props) => {
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: "none",  sm: "none", md: "block" },
+          display: { xs: "none", sm: "none", md: "block" },
           p: 2,
           ...sidenavPaperStyles,
         }}

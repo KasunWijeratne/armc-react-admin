@@ -32,6 +32,7 @@ function App() {
           width: {
             md: `calc(100% - ${SIDENAV_WIDTH}px)`,
             sm: `100%`,
+            xs: `100%`,
           },
           pl: {
             md: 1,
