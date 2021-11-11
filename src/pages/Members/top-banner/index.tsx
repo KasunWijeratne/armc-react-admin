@@ -9,7 +9,7 @@ import Envelope from '../../../components/icons/Envelope';
 import Phone from '../../../components/icons/Phone';
 import AccountTypeControl from './AccountTypeControl';
 import AccountStatusControl from './AccountStatusControl';
-import Image from '../../../components/image';
+import Image from '../../../components/Image';
 
 interface Props {
   data: {
@@ -123,13 +123,13 @@ const TopBanner = ({ data } : Props) => {
                 control={<AccountTypeControl />}
                 list={[
                   {
-                    content: redeemablePoints,
-                  },
-                  {
                     content: (
-                      <Typography color="error" sx={{ fontSize: 12 }}>
-                        {expiringPoints} Points will be expired soon
-                      </Typography>
+                      <>
+                        <Typography>{redeemablePoints}</Typography>
+                        <Typography color="error" sx={{ fontSize: 12 }}>
+                          {expiringPoints} Points will be expired soon
+                        </Typography>
+                      </>
                     ),
                   },
                 ]}

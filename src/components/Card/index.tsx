@@ -7,20 +7,22 @@ import {
 
 interface Props {
   children: JSX.Element | JSX.Element[];
-  title: string;
+  title: string | JSX.Element;
   subheader?: string;
   action?: JSX.Element;
   footer?: JSX.Element;
   color?: string;
+  borderColor?: string;
 }
 
-const Card = ({ children, title, subheader, action, footer, color }: Props) => {
+const Card = ({ children, title, subheader, action, footer, color, borderColor }: Props) => {
   return (
     <MUICard
       sx={{
         position: "relative",
         zIndex: 1,
         color: color || "text",
+        borderColor: borderColor || null
       }}
     >
       <CardHeader

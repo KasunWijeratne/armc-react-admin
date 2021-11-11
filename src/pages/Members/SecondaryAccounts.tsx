@@ -40,12 +40,12 @@ const SecondaryAccounts = ({ count, accounts }: Props) => {
         </CardActions>
       }
     >
-      <Box sx={{ position: "relative", zIndex: 1 }}>
+      <Box>
         {accounts.map((account) => (
           <ListCompact
             list={[
               {
-                icon: <UserSolid sx={{ width: 20, height: 15 }} />,
+                icon: <UserSolid />,
                 content: <Typography>{account.name}</Typography>,
                 control: (
                   <Link href="#" color="secondary" fontSize={14}>

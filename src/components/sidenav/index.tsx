@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import DashboardIcon from "../icons/Dashboard";
 import UserGroup from "../icons/UserGroup";
-import Image from "../image";
+import Image from "../Image";
 import UserImage from "../../assets/images/download (3)@2x.png";
 import { Box, styled } from "@mui/system";
 import CoinStack from "../icons/CoinStack";

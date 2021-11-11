@@ -1,6 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { palatte } from "./colors";
-import { MuiButton, MuiCard, MuiChip } from "./overrides";
+import { MuiButton, MuiCard, MuiChip, MuiTab, MuiTabs } from "./overrides";
 import { typography } from "./typography";
 
 const { primary, secondary, error, warning, info, bgPrimary, bgSecondary } = palatte;
@@ -49,6 +49,12 @@ export const theme = createTheme({
     },
     MuiChip: {
       ...MuiChip,
+    },
+    MuiTab: {
+      ...MuiTab as any,
+    },
+    MuiTabs: {
+      ...MuiTabs,
     }
   },
   typography,

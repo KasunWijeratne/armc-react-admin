@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Paper } from "@mui/material";
-import Sidenav, { sidenavWidth } from "./components/sidenav";
+import Sidenav, { sidenavWidth } from "./components/Sidenav";
 import MembersPage from "./pages/Members";
 
 function App() {

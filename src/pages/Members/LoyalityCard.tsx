@@ -53,11 +53,11 @@ const LoyalityCard = ({
             list={[
               {
                 icon: <IDCard sx={{ width: 20, height: 15 }} />,
-                content: <Typography>{card.id}</Typography>,
-              },
-              {
                 content: (
-                  <Typography sx={{ fontSize: 12 }}>{card.type}</Typography>
+                  <>
+                    <Typography>{card.id}</Typography>
+                    <Typography sx={{ fontSize: 12 }}>{card.type}</Typography>
+                  </>
                 ),
               },
             ]}

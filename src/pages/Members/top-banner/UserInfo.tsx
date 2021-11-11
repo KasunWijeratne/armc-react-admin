@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Image from "../../../components/image";
+import Image from "../../../components/Image";
 
 interface Props {
   image: string;
