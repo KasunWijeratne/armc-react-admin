@@ -36,7 +36,6 @@ const TopBanner = ({ data } : Props) => {
     email,
     phone,
     type,
-    status,
     redeemablePoints,
     expiringPoints,
     tierPoints,
