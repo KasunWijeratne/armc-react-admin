@@ -23,7 +23,6 @@ import PieChart from "../icons/PieChart";
 import ImageTextSelect from "../ImageTextSelect";
 import { sidenavPaperStyles } from "./sidenav.style";
 import { Context } from "../../context/navContext";
-import Image from "../Image/Image";
 
 const navItems = [
   {
