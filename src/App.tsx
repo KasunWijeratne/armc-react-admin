@@ -11,14 +11,14 @@ function App() {
         component="nav"
         sx={{
           width: {
-            sm: SIDENAV_WIDTH,
+            md: SIDENAV_WIDTH,
           },
           flexShrink: {
             sm: 0,
           },
           p: {
-            sm: 2,
-            xs: 0,
+            md: 2,
+            sm: 0,
           },
         }}
         aria-label="main navigation"
@@ -30,12 +30,12 @@ function App() {
         sx={{
           flexGrow: 1,
           width: {
-            sm: `calc(100% - ${SIDENAV_WIDTH}px)`,
-            xs: `100%`,
+            md: `calc(100% - ${SIDENAV_WIDTH}px)`,
+            sm: `100%`,
           },
           pl: {
-            sm: 1,
-            xs: 0,
+            md: 1,
+            sm: 0,
           },
         }}
       >
@@ -44,12 +44,12 @@ function App() {
           sx={{
             height: "100%",
             borderTopLeftRadius: {
-              sm: 25,
-              xs: 0,
+              md: 25,
+              sm: 0,
             },
             borderBottomLeftRadius: {
-              sm: 25,
-              xs: 0,
+              md: 25,
+              sm: 0,
             },
           }}
         >

@@ -149,7 +149,7 @@ const Sidenav = ({ window }: Props) => {
         open={open}
         onClose={handleDrawerToggle}
         sx={{
-          display: { xs: "block", sm: "none" },
+          display: { sm: "block", md: "none" },
           p: 2,
           ...sidenavPaperStyles,
         }}
@@ -159,7 +159,7 @@ const Sidenav = ({ window }: Props) => {
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: "none", sm: "block" },
+          display: { sm: "none", md: "block" },
           p: 2,
           ...sidenavPaperStyles,
         }}
