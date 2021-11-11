@@ -60,6 +60,7 @@ const TopBanner = ({ data } : Props) => {
           xs={12}
           sx={{
             borderWidth: {
+              lg: "0 1px 0 0",
               md: "0 1px 1px 0",
               sm: "0 0 1px 0",
               xs: "0 0 1px 0",
@@ -79,6 +80,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 1px 1px 0",
                   md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -109,6 +111,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 1px 0 0",
                   md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -163,6 +166,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 1px 0 0",
                   md: "0 1px 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -191,6 +195,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 1px 1px 0",
                   md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -223,6 +228,7 @@ const TopBanner = ({ data } : Props) => {
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 1px 0 0",
                   md: "0 0 1px 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -247,11 +253,14 @@ const TopBanner = ({ data } : Props) => {
             <Grid
               item
               width={1}
-              sm={6}
+              lg={12}
+              md={6}
+              sm={12}
               px={5}
               py={2}
               sx={{
                 borderWidth: {
+                  lg: "0 0 1px 0",
                   md: "0 1px 0 0",
                   sm: "0 0 1px 0",
                   xs: "0 0 1px 0",
@@ -278,7 +287,7 @@ const TopBanner = ({ data } : Props) => {
                 ]}
               />
             </Grid>
-            <Grid item px={5} py={2}>
+            <Grid item px={5} py={2} width={1} lg={12} md={6} sm={12}>
               <OtherInfo
                 subheader="Affinity Group"
                 list={[
