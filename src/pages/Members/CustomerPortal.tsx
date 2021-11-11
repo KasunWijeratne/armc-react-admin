@@ -1,8 +1,8 @@
-import { Button, CardActions, Link, Typography } from '@mui/material';
+import { Link, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react'
 import Card from "../../components/Card";
-import ExpandDown from '../../components/icons/ExpandDown';
+import ExpanderFooter from '../../components/Card/ExpanderFooter';
 import LaptopSolid from '../../components/icons/LaptopSolid';
 import MobileSolid from '../../components/icons/MobileSolid';
 import ListCompact from '../../components/list/ListCompact';
@@ -22,22 +22,7 @@ const CustomerPortal = ({
   return (
     <Card
       title="Customer Portals"
-      footer={
-        <CardActions
-          sx={{
-            bgcolor: "background.default",
-            position: "relative",
-          }}
-        >
-          <Button
-            size="small"
-            endIcon={<ExpandDown />}
-            sx={{ color: "text.primary" }}
-          >
-            See {count} more
-          </Button>
-        </CardActions>
-      }
+      footer={<ExpanderFooter count={count} />}
     >
       <Box>
         <ListCompact

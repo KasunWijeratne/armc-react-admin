@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, CardActions, IconButton, Link, Typography } from "@mui/material";
+import { IconButton, Link, Typography } from "@mui/material";
 import MoreVert from "../../components/icons/MoreVert";
-import ExpandDown from "../../components/icons/ExpandDown";
 import { Box } from "@mui/system";
 import ListCompact from "../../components/list/ListCompact";
 import Card from "../../components/Card";
 import UserSolid from "../../components/icons/UserSolid";
+import ExpanderFooter from "../../components/Card/ExpanderFooter";
 
 interface Props {
   count: number;
@@ -23,22 +23,7 @@ const SecondaryAccounts = ({ count, accounts }: Props) => {
           <MoreVert />
         </IconButton>
       }
-      footer={
-        <CardActions
-          sx={{
-            bgcolor: "background.default",
-            position: "relative",
-          }}
-        >
-          <Button
-            size="small"
-            endIcon={<ExpandDown />}
-            sx={{ color: "text.primary" }}
-          >
-            See {count} more
-          </Button>
-        </CardActions>
-      }
+      footer={<ExpanderFooter count={count} />}
     >
       <Box>
         {accounts.map((account) => (

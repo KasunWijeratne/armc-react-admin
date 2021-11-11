@@ -1,8 +1,8 @@
-import { Button, CardActions, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import Card from "../../components/Card";
-import ExpandDown from "../../components/icons/ExpandDown";
+import ExpanderFooter from "../../components/Card/ExpanderFooter";
 import ListCompact from "../../components/list/ListCompact";
 
 interface Props {
@@ -18,22 +18,7 @@ const CustomerDetails = ({ count, details }: Props) => {
   return (
     <Card
       title="Customer Details"
-      footer={
-        <CardActions
-          sx={{
-            bgcolor: "background.default",
-            position: "relative",
-          }}
-        >
-          <Button
-            size="small"
-            endIcon={<ExpandDown />}
-            sx={{ color: "text.primary" }}
-          >
-            See {count} more
-          </Button>
-        </CardActions>
-      }
+      footer={<ExpanderFooter count={count} />}
     >
       <Box>
         <ListCompact

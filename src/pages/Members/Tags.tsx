@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button, CardActions, Chip, Link } from '@mui/material';
+import { Chip, Link } from '@mui/material';
 import Card from "../../components/Card";
-import ExpandDown from '../../components/icons/ExpandDown';
 import { Box } from '@mui/system';
+import ExpanderFooter from '../../components/Card/ExpanderFooter';
 
 interface Props {
   count: number;
@@ -16,22 +16,7 @@ const Tags = ({
   return (
     <Card
       title="Tags"
-      footer={
-        <CardActions
-          sx={{
-            bgcolor: "background.default",
-            position: "relative",
-          }}
-        >
-          <Button
-            size="small"
-            endIcon={<ExpandDown />}
-            sx={{ color: "text.primary" }}
-          >
-            See {count} more
-          </Button>
-        </CardActions>
-      }
+      footer={<ExpanderFooter count={count} />}
     >
       <Box>
         {tags.map((tag) => (
