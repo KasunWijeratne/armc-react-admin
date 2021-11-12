@@ -20,7 +20,7 @@ https://hungry-heyrovsky-861626.netlify.app/
 This has been built based on a design created for 1920 x 1080 screen size, hence the exact layout can be seen through a same sized screen.
 However the UI responses for Web, Tab and Mobile screens (Finetuning needed).
 
-##TODO
+## TODO
 - Improve reusability
 - Finetune spacing & responsiveness
 - Use proper types
