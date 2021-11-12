@@ -33,8 +33,9 @@ const LoyalityCard = ({
       color="#fff"
     >
       <Box sx={{ position: "relative", zIndex: 1 }}>
-        {cards.map((card) => (
+        {cards.map((card, i) => (
           <ListCompact
+            key={`item${i}`}
             list={[
               {
                 icon: <IDCard sx={{ width: 20, height: 15 }} />,

@@ -9,12 +9,21 @@ This is a sample static UI build with React + Typescript.
 - Material UI
 - Storybook (yarn storybook)
 
+## Styling
+This UI uses MUIs improved 'MUI System' for styling components 
+https://mui.com/system/basics/
+
 ## Hosted at
 https://hungry-heyrovsky-861626.netlify.app/
 
 ## Responsiveness
 This has been built based on a design created for 1920 x 1080 screen size, hence the exact layout can be seen through a same sized screen.
 However the UI responses for Web, Tab and Mobile screens (Finetuning needed).
+
+##TODO
+- Improve reusability
+- Finetune spacing & responsiveness
+- Use proper types
 
 - - -
 

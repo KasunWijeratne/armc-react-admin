@@ -14,15 +14,19 @@ const Tags = ({
   tags,
 }: Props) => {
   return (
-    <Card
-      title="Tags"
-      footer={<ExpanderFooter count={count} />}
-    >
+    <Card title="Tags" footer={<ExpanderFooter count={count} />}>
       <Box>
-        {tags.map((tag) => (
-          <Chip label={tag} variant="outlined" sx={{ mr: 1 }} />
+        {tags.map((tag, i) => (
+          <Chip
+            key={`item${i}`}
+            label={tag}
+            variant="outlined"
+            sx={{ mr: 1 }}
+          />
         ))}
-        <Link href="#" color="secondary" fontSize={14}>Add</Link>
+        <Link href="#" color="secondary" fontSize={14}>
+          Add
+        </Link>
       </Box>
     </Card>
   );

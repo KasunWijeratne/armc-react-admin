@@ -47,6 +47,7 @@ const ListCompact = ({
       {list.map((item, i) => (
         <>
           <ListItem
+            key={`item${i}`}
             sx={{
               p: borderLess ? 1 : 0,
               mt: borderLess ? 1 : 0,

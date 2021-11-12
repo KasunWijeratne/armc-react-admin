@@ -26,8 +26,9 @@ const SecondaryAccounts = ({ count, accounts }: Props) => {
       footer={<ExpanderFooter count={count} />}
     >
       <Box>
-        {accounts.map((account) => (
+        {accounts.map((account, i) => (
           <ListCompact
+            key={`item${i}`}
             list={[
               {
                 icon: <UserSolid />,

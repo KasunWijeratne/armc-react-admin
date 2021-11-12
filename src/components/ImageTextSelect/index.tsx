@@ -20,8 +20,8 @@ const ImageTextSelect = ({
         },
       }}
     >
-      {items.map((item) => (
-        <MenuItem value={item.text}>
+      {items.map((item, i) => (
+        <MenuItem value={item.text} key={`item${i}`}>
           <Box display="flex">
             <Image src={item.image} alt="User" size="xs" round />
             <Typography ml={1}>{item.text}</Typography>

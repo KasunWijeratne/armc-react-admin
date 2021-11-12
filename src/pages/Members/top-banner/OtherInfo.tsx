@@ -20,4 +20,4 @@ const OtherInfo = ({ subheader, control, list }: Props) => {
   );
 };
 
-export default OtherInfo;
+export default React.memo(OtherInfo);
